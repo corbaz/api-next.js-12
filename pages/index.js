@@ -12,7 +12,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
+
+        <h1 className="text-6xl font-boldt first-letter:text-[·0070f3]">
           Bienvenido a <a href="https://nextjs.org">Next.js!</a>
         </h1>
 

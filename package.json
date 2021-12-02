@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "git": "git add -A && git commit -m 'update' && git push",
+    "git": "git add -A && git commit -m 'update' && git push --set-upstream origin main",
     "git-init": "git init && git remote add origin https://github.com/corbaz/api-next.js-12.git && git branch -M main",
     "build": "next build",
     "start": "next start",

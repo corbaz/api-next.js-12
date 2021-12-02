@@ -4,6 +4,8 @@
   "scripts": {
     "dev": "next dev",
     "git": "git add -A && git commit -m 'update' && git push --set-upstream origin main",
+    "banch-main": "git checkout main",
+    "banch-boilerplate": "git checkout boilerplate",
     "git-init": "git init && git remote add origin https://github.com/corbaz/api-next.js-12.git && git branch -M main",
     "build": "next build",
     "start": "next start",

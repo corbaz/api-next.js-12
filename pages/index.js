@@ -13,41 +13,43 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Bienvenido a <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Comience por editar{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
+            <h2>Documentación &rarr;</h2>
+            <p>Información detallada sobre las características de Next.js y la API</p>
+            <p className={styles.diez}>https://nextjs.org</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
+            <h2>Aprender  &rarr;</h2>
+            <p>¡Aprende acerca de Next.js en un curso interactivo con pruebas!</p>
+            <p className={styles.diez}>https://nextjs.org/learn</p>
           </a>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
           >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
+            <h2>Ejemplos &rarr;</h2>
+            <p>Descubre y despliegua ejemplo de proyectos de Next.js.</p>
+            <p className={styles.diez}>https://github.com/vercel/next.js/tree/master/examples</p>
           </a>
 
           <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
           >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
+            <h2>Desplegar &rarr;</h2>
+            <p>Next.JS despliega rapidamente su sitio en una URL pública con VERCEL</p>
+            <p className={styles.diez}>https://vercel.com/new</p>
           </a>
         </div>
       </main>
@@ -58,7 +60,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Impulsado por{' '}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>

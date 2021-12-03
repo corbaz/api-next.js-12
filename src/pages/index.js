@@ -1,13 +1,19 @@
 import {useTaskContext} from '../context/TaskContext';
+import Layout from '../components/Layout';
+
 
 export default function Home() {
     const {tasks} = useTaskContext();
+
     return (
-        <ul>
-            {tasks.map(item => (
-                <li key={item.id}>{item.title}</li>
-            ))}
-        </ul>
+        <Layout>
+            <h1>Tasks</h1>
+            <ul>
+                {tasks.map(task => (
+                    <li key={task.id}>{task.title}</li>
+                ))}
+            </ul>
+        </Layout>
     )
 }
 

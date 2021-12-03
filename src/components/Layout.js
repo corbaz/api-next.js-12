@@ -4,9 +4,12 @@ import styles from '../styles/Home.module.css'
 import {BsPlusLg as Plus} from 'react-icons/Bs'
 import Link from 'next/link'
 import {useRouter} from 'next/router'
+import {useTaskContext} from '../context/TaskContext';
 
 export default function Layout({children}) {
+    const {tasks, addTask} = useTaskContext();
     const router = useRouter()
+
     return (
         <div className={styles.container}>
             <Head>
@@ -20,28 +23,30 @@ export default function Layout({children}) {
                     <Link href="/">
                         <span className="font-semibold text-xl tracking-tight">Notebo-OK</span>
                     </Link>
+                    <span
+                        className="font-semibold text-xs tracking-tight ml-2 text-[#0070f3]">{tasks.length} tareas</span>
                 </div>
                 <div className="flex justify-between items-center gap-4 text-sm">
-                    <Link href="/">
+                    <Link href="/a">
                         <a className="inline-block mt-0 text-teal-200 hover:text-white">
-                            Home
+                            a
                         </a>
                     </Link>
-                    <Link href="/">
+                    <Link href="/b">
                         <a className="inline-block mt-0 text-teal-200 hover:text-white">
-                            Home
+                            b
                         </a>
                     </Link>
-                    <Link href="/">
+                    <Link href="/c">
                         <a className="inline-block mt-0 text-teal-200 hover:text-white">
-                            Home
+                            c
                         </a>
                     </Link>
                     <button className="inline-flex  mt-0 text-teal-200 text-sm px-3 py-2
                             border rounded border-white
                             hover:border-white hover:bg-white hover:text-teal-500"
                             onClick={() => {
-                                router.push('/newTask1').then(r => '/')
+                                router.push('/newTask').then();
                             }}
                     >
                         <Plus className={"mr-2 my-auto"}/>Nueva Tarea

@@ -1,7 +1,6 @@
 import {useTaskContext} from '../context/TaskContext';
 import Layout from '../components/Layout';
 
-
 export default function Home() {
     const {tasks} = useTaskContext();
 

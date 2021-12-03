@@ -1,6 +1,6 @@
 import Layout from '../components/Layout';
 
-export const NewTask = () => {
+export default function NewTask() {
     return (
         <Layout>
             <div>

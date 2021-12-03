@@ -1,16 +1,13 @@
-import {TaskContext} from '../context/TaskContext';
-import {useContext} from 'react';
+import {useTaskContext} from '../context/TaskContext';
 
-
-const Home = () => {
-    const {hello} = useContext(TaskContext);
+export default function Home() {
+    const {tasks} = useTaskContext();
     return (
-        <div>
-            <h1>API</h1>
-            <p>
-                Hello, this is the API page.{hello}
-            </p>
-        </div>
+        <ul>
+            {tasks.map(item => (
+                <li key={item.id}>{item.title}</li>
+            ))}
+        </ul>
     )
 }
-export default Home;
+

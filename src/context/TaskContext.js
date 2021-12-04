@@ -1,5 +1,5 @@
 import {createContext, useContext, useState} from 'react';
-
+import {v4 as ID} from "uuid";
 // funcion que va a devolver un objeto con el contexto
 const TaskContext = createContext();
 
@@ -24,64 +24,21 @@ export const TaskProvider = ({children}) => {
             description: 'Descripcion de la tarea 3',
             status: 'Pendiente'
         },
-        {
-            id: 4,
-            title: 'Tarea 4',
-            description: 'Descripcion de la tarea 4',
-            status: 'Pendiente'
-        },
-        {
-            id: 5,
-            title: 'Tarea 5',
-            description: 'Descripcion de la tarea 5',
-            status: 'Pendiente'
-        },
-        {
-            id: 6,
-            title: 'Tarea 6',
-            description: 'Descripcion de la tarea 6',
-            status: 'Pendiente'
-        },
-        {
-            id: 7,
-            title: 'Tarea 7',
-            description: 'Descripcion de la tarea 7',
-            status: 'Pendiente'
-        },
-        {
-            id: 8,
-            title: 'Tarea 8',
-            description: 'Descripcion de la tarea 8',
-            status: 'Pendiente'
-        },
-        {
-            id: 9,
-            title: 'Tarea 9',
-            description: 'Descripcion de la tarea 9',
-            status: 'Pendiente'
-        },
-        {
-            id: 10,
-            title: 'Tarea 10',
-            description: 'Descripcion de la tarea 10',
-            status: 'Pendiente'
-        },
-        {
-            id: 11,
-            title: 'Tarea 11',
-            description: 'Descripcion de la tarea 11',
-            status: 'Pendiente'
-        },
-        {
-            id: 12,
-            title: 'Tarea 12',
-            description: 'Descripcion de la tarea 12',
-            status: 'Pendiente'
-        }
     ]);
+    const crearTarea = (title, description, status) => {
+        // Añadir una tarea al array de tareas(tasks)
+        setTasks([...tasks,
+            {
+                id: ID(),
+                title,
+                description,
+                status
+            }
+        ]);
+    };
 
     return (
-        <TaskContext.Provider value={{tasks, setTasks}}>
+        <TaskContext.Provider value={{tasks, setTasks, crearTarea}}>
             {children}
         </TaskContext.Provider>
     )
@@ -89,7 +46,7 @@ export const TaskProvider = ({children}) => {
 
 // cuando se necesita el contexto
 // custom hook
-export const useTaskContext = () => {
+export default function useTaskContext() {
     const context = useContext(TaskContext);
     if (!context) {
         throw new Error('useTaskContext must be used within a TaskProvider');

@@ -119,7 +119,7 @@ export default function NewTask() {
               />
             </div>
             {/*Botones*/}
-            <div className="inline-flex justify-center gap-4">
+            <div className="flex justify-evenly">
               {/*Boton Save/Guardar*/}
               <button
                 className="inline-flex justify-center py-2 px-4

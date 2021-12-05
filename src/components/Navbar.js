@@ -2,15 +2,15 @@ import useTaskContext from "../context/TaskContext";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import { BsPlusLg as Plus } from "react-icons/Bs";
+import { BsPlusLg as Plus } from "react-icons/bs";
 
 export default function Navbar() {
-  const { tasks, addTask } = useTaskContext();
+  const { tasks } = useTaskContext();
   const router = useRouter();
   return (
     <div
       className="navbar mb-2 shadow-lg bg-neutral text-neutral-content rounded-box
-        flex flex-nowrap w-100 justify-between items-cente"
+        flex flex-nowrap w-100 justify-between items-center"
     >
       {/*Menu Hamburguesa*/}
       <div className="flex-none hidden lg:flex">
@@ -26,14 +26,14 @@ export default function Navbar() {
               strokeLinejoin="round"
               strokeWidth="2"
               d="M4 6h16M4 12h16M4 18h16"
-            ></path>
+            />
           </svg>
         </button>
       </div>
 
       {/*Empresa*/}
       <div className="flex-1 px-2 mx-0 flex hover:cursor-pointer">
-        <Link href="/" passHref>
+        <Link href={"/"} passHref>
           <span className="text-xs font-bold">Notebo-OK</span>
         </Link>
       </div>
@@ -47,21 +47,19 @@ export default function Navbar() {
 
       {/*newTask*/}
       <div className="flex-none hover:cursor-pointer">
-        <Link href="/newTask" passHref>
-          <button
-            className="btn btn-square btn-ghost"
-            onClick={() => {
-              router.push("/newTask").then();
-            }}
-          >
-            <Plus />
-          </button>
-        </Link>
+        <button
+          className="btn btn-square btn-ghost"
+          onClick={() => {
+            router.push("/newTask").then();
+          }}
+        >
+          <Plus />
+        </button>
       </div>
 
       {/*listTask / Notificaciones*/}
       <div className="flex-none hover:cursor-pointer">
-        <Link href="/listTask" passHref>
+        <Link href={"/listTask"} passHref>
           <button className="btn btn-square btn-ghost">
             <svg
               xmlns="http://www.w3.org/2000/svg"

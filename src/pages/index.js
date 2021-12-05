@@ -1,18 +1,10 @@
-import useTaskContext from '../context/TaskContext';
-import Layout from '../components/Layout';
+import Layout from "../components/Layout";
+import Tareas from "../components/Tareas";
 
 export default function Home() {
-    const {tasks} = useTaskContext();
-
-    return (
-        <Layout>
-            <h1>Tasks</h1>
-            <ul>
-                {tasks.map(task => (
-                    <li key={task.id}>{task.title}</li>
-                ))}
-            </ul>
-        </Layout>
-    )
+  return (
+    <Layout>
+      <Tareas />
+    </Layout>
+  );
 }
-

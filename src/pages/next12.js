@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -12,52 +12,67 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-
         <h1 className="text-6xl font-boldt first-letter:text-[·0070f3]">
           Bienvenido a <a href="https://nextjs.org">Next.js!</a>
         </h1>
 
         <p className={styles.description}>
-          Comience por editar{' '}
+          Comience por editar{" "}
           <code className={styles.code}>pages/index.js</code>
         </p>
 
         <div className={styles.grid}>
-          <a href="https://nextjs.org/docs"
-             className={styles.card}
-             target="_blank" rel="noreferrer"
+          <a
+            href="https://nextjs.org/docs"
+            className={styles.card}
+            target="_blank"
+            rel="noreferrer"
           >
             <h2>Documentación &rarr;</h2>
-            <p>Información detallada sobre las características de Next.js y la API</p>
+            <p>
+              Información detallada sobre las características de Next.js y la
+              API
+            </p>
             <p className={styles.diez}>https://nextjs.org</p>
           </a>
 
-          <a href="https://nextjs.org/learn"
-             className={styles.card}
-             target="_blank" rel="noreferrer"
+          <a
+            href="https://nextjs.org/learn"
+            className={styles.card}
+            target="_blank"
+            rel="noreferrer"
           >
-            <h2>Aprender  &rarr;</h2>
-            <p>¡Aprende acerca de Next.js en un curso interactivo con pruebas!</p>
+            <h2>Aprender &rarr;</h2>
+            <p>
+              ¡Aprende acerca de Next.js en un curso interactivo con pruebas!
+            </p>
             <p className={styles.diez}>https://nextjs.org/learn</p>
           </a>
 
           <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             <h2>Ejemplos &rarr;</h2>
             <p>Descubre y despliegua ejemplo de proyectos de Next.js.</p>
-            <p className={styles.diez}>https://github.com/vercel/next.js/tree/master/examples</p>
+            <p className={styles.diez}>
+              https://github.com/vercel/next.js/tree/master/examples
+            </p>
           </a>
 
           <a
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
-            target="_blank" rel="noreferrer"
+            target="_blank"
+            rel="noreferrer"
           >
             <h2>Desplegar &rarr;</h2>
-            <p>Next.JS despliega rapidamente su sitio en una URL pública con VERCEL</p>
+            <p>
+              Next.JS despliega rapidamente su sitio en una URL pública con
+              VERCEL
+            </p>
             <p className={styles.diez}>https://vercel.com/new</p>
           </a>
         </div>
@@ -69,12 +84,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Impulsado por{' '}
+          Impulsado por{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Logo-Vercel" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
